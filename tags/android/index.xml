@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on wada811.com</title>
+    <link>https://wada811.com/tags/android/</link>
+    <description>Recent content in Android on wada811.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wada811.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018-09-12 DeployGate Review Apps を作ったら便利だった</title>
+      <link>https://wada811.com/nippo/2018/09/12/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/09/12/</guid>
+      <description>DeployGate Review Apps とは そんなものは公式には存在しない。 Heroku Review Apps の仕組みのアプリ版のこと。 (made by wada811) Heroku Review Apps とは Pull Request ごとに Web の動作環境を Heroku 上に構築してくれる便利な</description>
+    </item>
+    
+    <item>
+      <title>2018-08-15 プロモーションコードを使って有料アプリを無料でインストールした</title>
+      <link>https://wada811.com/nippo/2018/08/15/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/15/</guid>
+      <description>今日は運良く TwitPane の作者がプロモーションコードのテスターを募集してたので手伝った✨ プロモーションコードというのを使えば有料のアプリを無料でインス</description>
+    </item>
+    
+  </channel>
+</rss>

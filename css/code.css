@@ -1,0 +1,62 @@
+[class^="language"]:before {
+    content: '';
+    display: block;
+    margin: -0.5em -0.5em 0.5em -0.5em;
+    background-color: #00566c;
+    color: #c5dee1;
+}
+
+.language-java:before {
+    content: 'Java';
+    padding: .5em;
+}
+
+.language-csharp:before {
+    content: 'C#';
+    padding: .5em;
+}
+
+.language-ruby:before {
+    content: 'Ruby';
+    padding: .5em;
+}
+
+.language-zsh:before {
+    content: 'zsh';
+    padding: .5em;
+}
+
+.language-PowerShell:before {
+    content: 'PowerShell';
+    padding: .5em;
+}
+
+.language-html:before {
+    content: 'HTML';
+    padding: .5em;
+}
+
+.language-css:before {
+    content: 'CSS';
+    padding: .5em;
+}
+
+.language-sql:before {
+    content: 'SQL';
+    padding: .5em;
+}
+
+.language-javascript:before {
+    content: 'JavaScript';
+    padding: .5em;
+}
+
+.language-kotlin:before {
+    content: 'Kotlin';
+    padding: .5em;
+}
+
+.language-bash:before {
+    content: 'bash';
+    padding: .5em;
+}

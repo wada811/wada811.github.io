@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+<title>2018-08-21 エリック・エヴァンスのドメイン駆動設計 第1部 | wada811.com</title>
+<meta name="description" content="エリック・エヴァンスのドメイン駆動設計の第1部を読んだ理解をまとめる。 第1部 ドメインモデルを機能させる ドメインとは、ソフトウェアが対象とする" />
+
+
+<meta property="og:url" content="https://wada811.com/nippo/2018/08/21/">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018-08-21 エリック・エヴァンスのドメイン駆動設計 第1部 | wada811.com">
+<meta property="og:description" content="エリック・エヴァンスのドメイン駆動設計の第1部を読んだ理解をまとめる。 第1部 ドメインモデルを機能させる ドメインとは、ソフトウェアが対象とする" />
+
+<meta property="og:image" content="https://wada811.com/assets/logo_512.png">
+<meta property="og:site_name" content="wada811.com">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@wada811">
+<meta name="twitter:creator" content="@wada811">
+<meta name="twitter:url" content="https://wada811.com/nippo/2018/08/21/" />
+
+<meta name="twitter:title" content="2018-08-21 エリック・エヴァンスのドメイン駆動設計 第1部 | wada811.com" />
+<meta name="twitter:description" content="エリック・エヴァンスのドメイン駆動設計の第1部を読んだ理解をまとめる。 第1部 ドメインモデルを機能させる ドメインとは、ソフトウェアが対象とする" />
+
+<meta name="twitter:image" content="https://wada811.com/assets/logo_512.png" />
+
+
+<link rel="shortcut icon" href="/assets/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/highlightjs/monokai-sublime.css">
+<link rel="stylesheet" href="/css/markdown.css?v=213ec61">
+<link rel="stylesheet" href="/css/styles.css?v=213ec61">
+<link rel="stylesheet" href="/css/code.css?v=213ec61">
+
+<header class="nav">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">wada811.com</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form method="get" action="https://github.com/wada811/wada811.com/search">
+                                <label style="margin: 0; padding: 10px; position: relative;">
+                                    <input type="text" name="q">
+                                    <i class="fa fa-search" style="position: absolute; top: 16px; right: 16px; color: #777;"></i>
+                                </label>
+                            </form>
+                        </li>
+                        
+                        <li>
+                            <a href="https://twitter.com/wada811" target="_blank">
+                                <i class="fa fa-twitter-square"></i>
+                                Twitter</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="https://github.com/wada811" target="_blank">
+                                <i class="fa fa-github-square"></i>
+                                GitHub
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <article class="post">
+
+                <header>
+                    <div class="markdown">
+                        <h1 class="post-title">2018-08-21 エリック・エヴァンスのドメイン駆動設計 第1部</h1>
+                    </div>
+                    <div class="post-meta">
+                        <a class="see-on-github" href="https://github.com/wada811/wada811.com/blob/master/content/nippo/2018-08-21.md" target="_blank" title="See on GitHub"><i class="fa fa-github-square"></i></a>
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <time datetime="2018-08-21" data-type="date">2018-08-21</time>
+                        
+                            <span class="glyphicon glyphicon-refresh"></span>
+                            <time datetime="2018-08-22" data-type="git">2018-08-22</time>
+                        
+                        <ul class="list-inline visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline">
+                            
+                            <li><a href="/tags/%E6%97%A5%E5%A0%B1"><i class="fa fa-tags"></i>日報</a></li>
+                            
+                            <li><a href="/tags/%E6%9B%B8%E7%B1%8D"><i class="fa fa-tags"></i>書籍</a></li>
+                            
+                            <li><a href="/tags/%E3%82%A8%E3%83%AA%E3%83%83%E3%82%AF%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%B9%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88"><i class="fa fa-tags"></i>エリック・エヴァンスのドメイン駆動設計</a></li>
+                            
+                            <li><a href="/tags/ddd"><i class="fa fa-tags"></i>DDD</a></li>
+                            
+                        </ul>
+                    </div>
+                </header>
+
+                <div class="markdown post-content"><p><a href="https://www.amazon.co.jp/d/4798121967/wada811-22/">エリック・エヴァンスのドメイン駆動設計</a>の第1部を読んだ理解をまとめる。</p>
+<h2 id="第1部-ドメインモデルを機能させる">第1部 ドメインモデルを機能させる</h2>
+<p>ドメインとは、ソフトウェアが対象とする問題領域のこと。</p>
+<p>モデルとは、問題を解決するために情報を簡略化・抽象化した知識の表現形式のこと。</p>
+<p>ドメインモデルとは、そのままドメインをモデル化したものということになる。</p>
+<h3 id="ドメイン駆動設計におけるモデルの有用性">ドメイン駆動設計におけるモデルの有用性</h3>
+<p>ドメイン駆動設計の特徴は以下の3点である。</p>
+<ol>
+<li>ドメインモデルが、チームメンバ全員が使用する言語の基盤となる</li>
+<li>ドメインモデルは、ドメイン知識をエンジニアとドメインエキスパートが協働して作り上げる</li>
+<li>ドメインモデルと実装が密接に結びつくことによってソフトウェアに確実に反映される</li>
+</ol>
+<p>ドメイン駆動設計とは、ドメインモデルを共通言語の基盤とし、ドメインモデルをコードやコミュニケーションと一体化させ、ドメインモデルを反復的に深化させる設計手法である。</p>
+<h3 id="ソフトウェアの核心">ソフトウェアの核心</h3>
+<p>ソフトウェアの核心は、ドメインに関係した問題をユーザのために解決することである。
+技術志向のエンジニアはドメインに関係する問題は好まず、スキルを発揮できる技術的な問題を好むが、ソフトウェアの核心にある複雑さに正面から立ち向かい、ドメインを学び、モデリングを行わなければ的外れなソフトウェアを作ってしまう危険性がある。
+ソフトウェアの核心にある複雑さに立ち向かうことは非常に高度な設計スキルを養う機会があり、その設計技術を身に着ければ価値のあるエンジニアとなる。</p>
+</div>
+
+                
+                <footer>
+
+                    <nav>
+                        <ul class="pager">
+
+                            
+                            <li class="previous"><a href="https://wada811.com/nippo/2018/08/17/"><span aria-hidden="true">&larr;</span> Newer</a></li>
+                            
+
+                            <li><a href="/nippo">All</a></li>
+
+                            
+                            <li class="next"><a href="https://wada811.com/nippo/2018/09/02/">Older <span aria-hidden="true">&rarr;</span></a></li>
+                            
+
+                        </ul>
+                    </nav>
+                </footer>
+
+            </article>
+        </div>
+        
+    </div>
+</div>
+
+<hr>
+
+<footer class="container copy">
+    <p>&copy; 2020  wada811.com </p>
+	<p>Build by <a href="https://bitrise.io/" target="_blank">Bitrise</a>, Generated by <a href="https://gohugo.io" target="_blank">Hugo</a>, Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="/highlightjs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://wada811.com",
+  "logo": "https://wada811.com/assets/logo_512.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "wada811",
+  "url": "https://wada811.com",
+  "sameAs": [
+    "https://www.facebook.com/takumi.wada.811",
+    "https://twitter.com/wada811",
+    "https://plus.google.com/+TakumiWADA"
+  ]
+}
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-41423152-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+</html>
+<script>
+$(function(){
+    $(".post-content table").addClass("table table-striped table-bordered");
+});
+</script>

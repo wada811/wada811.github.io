@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2018/08 on wada811.com</title>
+    <link>https://wada811.com/nippo/2018/08/</link>
+    <description>Recent content in 2018/08 on wada811.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wada811.com/nippo/2018/08/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018-08-21 エリック・エヴァンスのドメイン駆動設計 第1部</title>
+      <link>https://wada811.com/nippo/2018/08/21/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/21/</guid>
+      <description>エリック・エヴァンスのドメイン駆動設計の第1部を読んだ理解をまとめる。 第1部 ドメインモデルを機能させる ドメインとは、ソフトウェアが対象とする</description>
+    </item>
+    
+    <item>
+      <title>2018-08-17 エリック・エヴァンスのドメイン駆動設計を読んでる</title>
+      <link>https://wada811.com/nippo/2018/08/17/</link>
+      <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/17/</guid>
+      <description>ついにエリック・エヴァンスのドメイン駆動設計を読み始めた📖 まだ翻訳者謝辞までしか読んでなくて、以下のページのURLが記載されていたのでそちら</description>
+    </item>
+    
+    <item>
+      <title>2018-08-15 プロモーションコードを使って有料アプリを無料でインストールした</title>
+      <link>https://wada811.com/nippo/2018/08/15/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/15/</guid>
+      <description>今日は運良く TwitPane の作者がプロモーションコードのテスターを募集してたので手伝った✨ プロモーションコードというのを使えば有料のアプリを無料でインス</description>
+    </item>
+    
+    <item>
+      <title>2018-08-14 アジャイルプラクティスを読んでる3</title>
+      <link>https://wada811.com/nippo/2018/08/14/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/14/</guid>
+      <description>今日も引き続きアジャイルプラクティス 達人プログラマに学ぶ現場開発者の習慣を読んでた📖 メルカリで買おうか迷ってアプリを開いたら売上金615円が</description>
+    </item>
+    
+    <item>
+      <title>2018-08-13 アジャイルプラクティスを読んでる2</title>
+      <link>https://wada811.com/nippo/2018/08/13/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/13/</guid>
+      <description>昨日に引き続きアジャイルプラクティス 達人プログラマに学ぶ現場開発者の習慣を読んでる📖 無料試し読みの分を読み終わったので買おうかと思ったら Google Play</description>
+    </item>
+    
+    <item>
+      <title>2018-08-12 アジャイルプラクティスを読んでる</title>
+      <link>https://wada811.com/nippo/2018/08/12/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wada811.com/nippo/2018/08/12/</guid>
+      <description>Play Store のクーポンがあるよ🎫という通知を見て良さげな本を探してたらアジャイルプラクティス 達人プログラマに学ぶ現場開発者の習慣を見つけたのでとりあ</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+<title>2018-09-12 DeployGate Review Apps を作ったら便利だった | wada811.com</title>
+<meta name="description" content="DeployGate Review Apps とは そんなものは公式には存在しない。 Heroku Review Apps の仕組みのアプリ版のこと。 (made by wada811) Heroku Review Apps とは Pull Request ごとに Web の動作環境を Heroku 上に構築してくれる便利な" />
+
+
+<meta property="og:url" content="https://wada811.com/nippo/2018/09/12/">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018-09-12 DeployGate Review Apps を作ったら便利だった | wada811.com">
+<meta property="og:description" content="DeployGate Review Apps とは そんなものは公式には存在しない。 Heroku Review Apps の仕組みのアプリ版のこと。 (made by wada811) Heroku Review Apps とは Pull Request ごとに Web の動作環境を Heroku 上に構築してくれる便利な" />
+
+<meta property="og:image" content="https://wada811.com/assets/logo_512.png">
+<meta property="og:site_name" content="wada811.com">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@wada811">
+<meta name="twitter:creator" content="@wada811">
+<meta name="twitter:url" content="https://wada811.com/nippo/2018/09/12/" />
+
+<meta name="twitter:title" content="2018-09-12 DeployGate Review Apps を作ったら便利だった | wada811.com" />
+<meta name="twitter:description" content="DeployGate Review Apps とは そんなものは公式には存在しない。 Heroku Review Apps の仕組みのアプリ版のこと。 (made by wada811) Heroku Review Apps とは Pull Request ごとに Web の動作環境を Heroku 上に構築してくれる便利な" />
+
+<meta name="twitter:image" content="https://wada811.com/assets/logo_512.png" />
+
+
+<link rel="shortcut icon" href="/assets/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/index.xml">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/highlightjs/monokai-sublime.css">
+<link rel="stylesheet" href="/css/markdown.css?v=213ec61">
+<link rel="stylesheet" href="/css/styles.css?v=213ec61">
+<link rel="stylesheet" href="/css/code.css?v=213ec61">
+
+<header class="nav">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">wada811.com</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form method="get" action="https://github.com/wada811/wada811.com/search">
+                                <label style="margin: 0; padding: 10px; position: relative;">
+                                    <input type="text" name="q">
+                                    <i class="fa fa-search" style="position: absolute; top: 16px; right: 16px; color: #777;"></i>
+                                </label>
+                            </form>
+                        </li>
+                        
+                        <li>
+                            <a href="https://twitter.com/wada811" target="_blank">
+                                <i class="fa fa-twitter-square"></i>
+                                Twitter</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="https://github.com/wada811" target="_blank">
+                                <i class="fa fa-github-square"></i>
+                                GitHub
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <article class="post">
+
+                <header>
+                    <div class="markdown">
+                        <h1 class="post-title">2018-09-12 DeployGate Review Apps を作ったら便利だった</h1>
+                    </div>
+                    <div class="post-meta">
+                        <a class="see-on-github" href="https://github.com/wada811/wada811.com/blob/master/content/nippo/2018-09-12.md" target="_blank" title="See on GitHub"><i class="fa fa-github-square"></i></a>
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <time datetime="2018-09-12" data-type="date">2018-09-12</time>
+                        
+                            <span class="glyphicon glyphicon-refresh"></span>
+                            <time datetime="2018-09-14" data-type="git">2018-09-14</time>
+                        
+                        <ul class="list-inline visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline">
+                            
+                            <li><a href="/tags/%E6%97%A5%E5%A0%B1"><i class="fa fa-tags"></i>日報</a></li>
+                            
+                            <li><a href="/tags/android"><i class="fa fa-tags"></i>Android</a></li>
+                            
+                            <li><a href="/tags/deploygate"><i class="fa fa-tags"></i>DeployGate</a></li>
+                            
+                            <li><a href="/tags/bitrise"><i class="fa fa-tags"></i>Bitrise</a></li>
+                            
+                            <li><a href="/tags/pull-request"><i class="fa fa-tags"></i>Pull Request</a></li>
+                            
+                        </ul>
+                    </div>
+                </header>
+
+                <div class="markdown post-content"><h2 id="deploygate-review-apps-とは">DeployGate Review Apps とは</h2>
+<p>そんなものは公式には存在しない。
+<a href="https://devcenter.heroku.com/articles/github-integration-review-apps">Heroku Review Apps</a> の仕組みのアプリ版のこと。 (made by wada811)</p>
+<h3 id="heroku-review-apps-とは">Heroku Review Apps とは</h3>
+<p>Pull Request ごとに Web の動作環境を Heroku 上に構築してくれる便利な機能。詳しくは以下。</p>
+<ul>
+<li><a href="https://devcenter.heroku.com/articles/github-integration-review-apps">Review Apps | Heroku Dev Center</a></li>
+<li><a href="https://qiita.com/G-awa/items/c1286fed0575aaa05b34">Heroku Review Appsを使ってPRごとに環境をポコポコ立てて動作確認＋レビューをしやすくしよう - Qiita</a></li>
+</ul>
+<h2 id="deploygate-review-apps-がなぜ必要か何が嬉しいのか">DeployGate Review Apps がなぜ必要か、何が嬉しいのか</h2>
+<p>ほぼ Heroku Review Apps と同じ理由になってしまうが、以下のような理由がある。</p>
+<ul>
+<li>Pull Request のレビュー時に手軽に動作確認ができる
+<ul>
+<li>デザイン修正や挙動変更などのコードではわかりにくい</li>
+<li>気になったら pull してビルドしてインストールして…というのが面倒臭い</li>
+</ul>
+</li>
+<li>DeployGate は良いぞ
+<ul>
+<li><a href="https://deploygate.com/features?locale=ja">DeployGate機能紹介</a></li>
+<li><a href="https://deploygate.com/usecase?locale=ja">DeployGate · 利用事例</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="bitrise-の-install-page-じゃダメなの">Bitrise の install page じゃダメなの？</h3>
+<p>DeployGate は良い(ry</p>
+<h2 id="deploygate-review-apps-構築">DeployGate Review Apps 構築</h2>
+<h3 id="全体の構成">全体の構成</h3>
+<ol>
+<li>Pull Request 用の Workflow を設定 (ここでは Test workflow とする)
+<ol>
+<li>Bitrise で Pull Request をトリガーに Test Workflow を設定</li>
+<li>Test workflow で DeployGate Upload のステップを追加する
+<ul>
+<li><a href="https://wada811.com/nippo/2018/09/09/">2018-09-09 Bitrise で Android アプリを DepoyGate にアップロードする | wada811.com</a></li>
+<li>distribution_name に HEAD のブランチ名を設定する</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>BASE ブランチ(master, develop など)用の Workflow を設定 (ここでは Release workflow とする)
+<ol>
+<li>Bitrise で Push をトリガーに Release Workflow を設定</li>
+<li><a href="#deploygate-%E3%81%AE%E9%85%8D%E5%B8%83%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B-script-%E3%82%B9%E3%83%86%E3%83%83%E3%83%97">DeployGate の配布ページを削除する Script ステップ</a>を追加する</li>
+</ol>
+</li>
+</ol>
+<h3 id="動作ステップ">動作ステップ</h3>
+<ol>
+<li><em><strong>Pull Request の作成 または Pull Request への Push</strong></em>
+<ol>
+<li>Test workflow が開始</li>
+<li>HEAD ブランチ名で DeployGate の配布ページが作成される</li>
+</ol>
+</li>
+<li><em><strong>Pull Request のマージ</strong></em>
+<ol>
+<li>Release workflow が開始</li>
+<li>DeployGate の配布ページが削除される</li>
+</ol>
+</li>
+</ol>
+<h3 id="deploygate-の配布ページを削除する-script-ステップ">DeployGate の配布ページを削除する Script ステップ</h3>
+<pre><code>    - script:
+        title: Delete DeployGate Distribution Page
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -eux
+
+            # echo &quot;$GIT_CLONE_COMMIT_MESSAGE_SUBJECT&quot;: Merge pull request #3 from wada811/feature/app-icon
+            # awk '{ print $6 }': wada811/feature/app-icon
+            # cut -d '/' -f 2-`: feature/app-icon
+            DISTRIBUTION_NAME=`echo &quot;$GIT_CLONE_COMMIT_MESSAGE_SUBJECT&quot; | awk '{ print $6 }' | cut -d '/' -f 2-`
+
+            curl \
+              -X DELETE \
+              -F &quot;token=$DEPLOY_GATE_API_KEY&quot; \
+              -F &quot;distribution_name=$DISTRIBUTION_NAME&quot; \
+              &quot;https://deploygate.com/api/users/${DEPLOY_GATE_USER_NAME}/platforms/android/apps/${APP_PACKAGE_NAME}/distributions&quot;
+</code></pre><h4 id="references">References</h4>
+<ul>
+<li><a href="https://docs.deploygate.com/reference#%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E9%85%8D%E5%B8%83%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E9%85%8D%E5%B8%83%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%A7%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B">アプリの配布ページを配布ページの名前で削除する | DeployGate API リファレンス</a></li>
+</ul>
+<h2 id="deploygate-review-apps-を構築した感想">DeployGate Review Apps を構築した感想</h2>
+<p>最高。便利。なんでこんなに便利なものが既にないのか不思議。他の方法で解決していて話題にもならないのだろうか。</p>
+</div>
+
+                
+                <footer>
+
+                    <nav>
+                        <ul class="pager">
+
+                            
+                            <li class="previous"><a href="https://wada811.com/nippo/2018/09/02/"><span aria-hidden="true">&larr;</span> Newer</a></li>
+                            
+
+                            <li><a href="/nippo">All</a></li>
+
+                            
+                            <li class="next"><a href="https://wada811.com/nippo/2018/09/13/">Older <span aria-hidden="true">&rarr;</span></a></li>
+                            
+
+                        </ul>
+                    </nav>
+                </footer>
+
+            </article>
+        </div>
+        
+    </div>
+</div>
+
+<hr>
+
+<footer class="container copy">
+    <p>&copy; 2020  wada811.com </p>
+	<p>Build by <a href="https://bitrise.io/" target="_blank">Bitrise</a>, Generated by <a href="https://gohugo.io" target="_blank">Hugo</a>, Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="/highlightjs/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://wada811.com",
+  "logo": "https://wada811.com/assets/logo_512.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "wada811",
+  "url": "https://wada811.com",
+  "sameAs": [
+    "https://www.facebook.com/takumi.wada.811",
+    "https://twitter.com/wada811",
+    "https://plus.google.com/+TakumiWADA"
+  ]
+}
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-41423152-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+</html>
+<script>
+$(function(){
+    $(".post-content table").addClass("table table-striped table-bordered");
+});
+</script>

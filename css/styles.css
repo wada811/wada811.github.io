@@ -1,0 +1,62 @@
+body {
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+pre {
+    padding: 0;
+}
+
+pre code {
+    padding: .5em;
+    display: block;
+}
+
+.navbar-brand {
+    background: url("/assets/logo_128_trans.png") no-repeat left center;
+    background-size: 32px 32px;
+    padding-left: 36px;
+}
+
+.glyphicon {
+    font-size: 0.8em;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-meta {
+    margin-bottom: 1em;
+}
+
+.see-on-github img {
+    width: 1em;
+    height: 1em;
+    vertical-align: text-top;
+}
+
+.post-content {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.post-rels {
+    margin-bottom: 50px;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+.post .table {
+    display: inline-block;
+    width: auto!important;
+    overflow: auto;
+    white-space: nowrap;
+}

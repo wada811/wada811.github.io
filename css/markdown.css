@@ -1,0 +1,31 @@
+.markdown h1::before { content: "# "; }
+.markdown h2::before { content: "## "; }
+.markdown h3::before { content: "### "; }
+.markdown h4::before { content: "#### "; }
+/*
+.markdown strong::before, strong::after {
+    content: "**";
+}
+*/
+.markdown ul {
+    list-style: none;
+    padding-left: 2em;
+}
+.markdown > ul {
+    padding-left: 0;
+}
+.markdown ul > li::before,
+.markdown ul > li::before {
+    content: "- ";
+}
+
+/*
+.markdown ol {
+    counter-reset: list;
+}
+
+.markdown ol li::before {
+    counter-increment: list;
+    content: counter(list) ". ";
+}
+*/
